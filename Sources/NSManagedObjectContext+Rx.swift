@@ -40,6 +40,7 @@ public extension Reactive where Base: NSManagedObjectContext {
      - parameter cacheName: the name of the file used to cache section information; defaults to `nil`
      - returns: An `Observable` array of `NSFetchedResultsSectionInfo` objects that can be bound to a table view.
      */
+    @available(macOS 10.12, *)
     func sections<T: NSManagedObject>(fetchRequest: NSFetchRequest<T>,
                      sectionNameKeyPath: String? = nil,
                      cacheName: String? = nil) -> Observable<[NSFetchedResultsSectionInfo]> {

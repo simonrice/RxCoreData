@@ -11,6 +11,7 @@ import CoreData
 import RxSwift
 import RxCocoa
 
+@available(macOS 10.12, *)
 public final class FetchedResultsControllerEntityObserver<T: NSManagedObject> : NSObject, NSFetchedResultsControllerDelegate {
 	
 	typealias Observer = AnyObserver<[T]>
@@ -52,6 +53,7 @@ public final class FetchedResultsControllerEntityObserver<T: NSManagedObject> : 
 	}
 }
 
+@available(macOS 10.12, *)
 extension FetchedResultsControllerEntityObserver : Disposable {
 	
 	public func dispose() {

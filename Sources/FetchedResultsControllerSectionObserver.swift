@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import RxSwift
 
+@available(macOS 10.12, *)
 public final class FetchedResultsControllerSectionObserver<T: NSManagedObject> : NSObject, NSFetchedResultsControllerDelegate {
     
     typealias Observer = AnyObserver<[NSFetchedResultsSectionInfo]>
@@ -45,6 +46,7 @@ public final class FetchedResultsControllerSectionObserver<T: NSManagedObject> :
     }
 }
 
+@available(macOS 10.12, *)
 extension FetchedResultsControllerSectionObserver : Disposable {
     
     public func dispose() {
